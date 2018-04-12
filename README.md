@@ -1,2 +1,2 @@
-# Raspberry-Pi-le-Ak-ll-Ev-Otomasyonu
+# Raspberry-Pi-Ile-Akilli-Ev-Otomasyonu
 Gömülü Sistemler 1 No'lu Proje Ödevi
