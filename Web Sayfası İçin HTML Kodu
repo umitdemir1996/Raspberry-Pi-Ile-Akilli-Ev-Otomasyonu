@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN” “http://www.w3.org/TR/html4/loose.dtd”>
+<html>
+<head>
+<meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″>
+<meta name=”viewport” content = “height = device-height, width = 420, user-scalable = no” />
+<title>WebIOPi | Demo</title>
+<script type=”text/javascript” src=”/webiopi.js”></script>
+<script type=”text/javascript”>
+webiopi().ready(function() {
+webiopi().setFunction(25, “out”);
+webiopi().setFunction(24, “out”);
+webiopi().setFunction(23, “out”);
+webiopi().setFunction(22, “out”);
+webiopi().setFunction(21, “in”);
+var content, button;
+content = $(“#content”);
+// create a “SWITCH” labeled button for GPIO 21
+button = webiopi().createGPIOButton(21, “AKILLI EV OTOMASYONU”);
+content.append(button); // append button to content div
+// create a “LED” labeled button for GPIO 25
+button = webiopi().createGPIOButton(25, “ODA LAMBASI”);
+content.append(button); // append button to content div
+// create a “LED” labeled button for GPIO 24
+button = webiopi().createGPIOButton(24, “GECE LAMBASI”);
+content.append(button); // append button to content div
+// create a “LED” labeled button for GPIO 22
+button = webiopi().createGPIOButton(22, “PRIZ”);
+content.append(button); // append button to content div
+// create a “LED” labeled button for GPIO 23
+button = webiopi().createGPIOButton(23, “PERDE”);
+content.append(button); // append button to content div
+webiopi().refreshGPIO(true);
+});
+</script>
+<style type=”text/css”>
+button {
+display: block;
+margin: 5px 5px 5px 5px;
+width: 380px;
+height: 45px;
+font-size: 24pt;
+font-weight: bold;
+color: black;
+}
+input[type=”range”]
+{
+display: block;
+width: 160px;
+height: 45px;
+}
+.LOW {
+background-color: Red;
+}
+.HIGH {
+background-color: Green;
+}
+</style>
+</head><body>
+<div id=”content” align=”center”></div>
+</body>
+</html>
