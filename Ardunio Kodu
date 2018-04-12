@@ -1,0 +1,10 @@
+#include <Servo.h>
+Servo myservo;
+void setup() {
+myservo.attach(9);
+pinMode(6, INPUT);//perde
+}
+void loop() {
+if(digitalRead(6)==1){myservo.write(10);delay(15);}
+if(digitalRead(6)==0){myservo.write(180);delay(15);}
+}
